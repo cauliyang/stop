@@ -1,0 +1,19 @@
+[package]
+name = "rsqueue"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0"
+assert_cmd = "2.0.5"
+clap-verbosity-flag = "2.0.0"
+clap = "4.0.18"
+ctrlc = "3.2.3"
+indicatif = "0.17.1"
+human-panic = "1.0.3"
+log = "0.4.17"
+clap_complete = "4.0.3"
+termcolor = "1.1.3"
+prettytable-rs = "0.9.0"
