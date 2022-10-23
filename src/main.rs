@@ -1,13 +1,8 @@
-#![allow(unused)]
 mod cmd;
 mod nodes;
 mod partitions;
-mod table;
 
-
-use clap::Parser;
-use cmd::cmds;
-use nodes::node;
+use clap::{self, Parser};
 
 #[derive(Parser)]
 #[command(name = "rsqueue")]
@@ -16,9 +11,9 @@ use nodes::node;
 #[command(about = "A wrapper of slurm command that make that looks nicer")]
 #[command(version = "1.0")]
 enum Rsqueue {
-    #[command(about="Print Nodes INFO")]
+    #[command(about = "Show Nodes Information")]
     Nodes(Nodes),
-    #[command(about="Print Partitions INFO")]
+    #[command(about = "Show Partitions Information")]
     Partitions(Partitions),
 }
 
@@ -37,7 +32,9 @@ fn main() {
     match Rsqueue::parse() {
         Rsqueue::Nodes(Nodes {}) => println! {"nodes"},
         Rsqueue::Partitions(Partitions { me }) => {
-            cmds::squeue(Some(&["--me"]));
-        },
+            let mut partitions = partitions::Partitions::default();
+            partitions.update_job_status();
+            partitions.print_job_status();
+        }
     }
 }
