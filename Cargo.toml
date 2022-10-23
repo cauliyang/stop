@@ -1,6 +1,18 @@
 [package]
 name = "rsqueue"
 version = "0.1.0"
+authors = ["Yangyang Li <yangyang.li@northwestern.edu>"]
+description = "A Nicer Summary of slurm Command"
+repository = "https://github.com/cauliyang/rsqueue"
+categories = ["command-line-interface"]
+documentation = "https://docs.rs/rsqueue"
+readme = "README.md"
+license-file = "LICENSE"
+keywords = [
+  "cli",
+  "slurm"
+]
+license = "MIT"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
