@@ -7,7 +7,6 @@ repository = "https://github.com/cauliyang/rsqueue"
 categories = ["command-line-interface"]
 documentation = "https://docs.rs/rsqueue"
 readme = "README.md"
-license-file = "LICENSE"
 keywords = [
   "cli",
   "slurm"
